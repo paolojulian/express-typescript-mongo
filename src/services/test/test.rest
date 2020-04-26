@@ -1,0 +1,10 @@
+GET http://localhost:8081/api/tests
+###
+
+POST http://localhost:8081/api/tests
+Content-Type: application/json
+
+{
+    "name": "Pipay",
+    "job": "Wand"
+}

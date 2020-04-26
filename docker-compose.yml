@@ -1,0 +1,36 @@
+version: "3"
+
+services:
+
+  # Auth API Service
+  api:
+    container_name: express-typescript-mongo
+    restart: always
+    image: express-typescript-mongo
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - 8081:8081
+    depends_on:
+      - "mongo"
+
+  # MongoDB
+  mongo:
+    image: mongo
+    volumes:
+      - ./data:/data/db
+    restart: always
+    ports: 
+      - "27017:27017"
+
+  # MongoDB Admin
+  adminmongo:
+    image: "mrvautin/adminmongo"
+    ports:
+      - "1234:1234"
+    environment:
+      - HOST=0.0.0.0

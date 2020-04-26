@@ -1,0 +1,9 @@
+app: pos-api-auth
+require:
+  - ts-node/register
+  - source-map-support/register
+spec:
+  - ./src/tests/setup.ts
+  - ./src/tests/**/*.spec.ts
+recursive: true
+exit: true

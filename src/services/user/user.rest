@@ -1,0 +1,13 @@
+# User
+
+## REGISTER ##
+POST http://localhost:8081/api/users/register
+Content-Type: application/json
+
+{
+    "email": "chefpipz@gmail.com",
+    "username": "chefpipz",
+    "password": "admin123",
+    "confirmPassword": "admin123"
+}
+###

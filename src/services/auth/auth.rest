@@ -1,0 +1,21 @@
+#Auth
+## Login Function
+POST http://localhost:8081/api/auth/login
+Content-Type: application/json
+
+{
+    "username": "chefpipz@gmail.com",
+    "password": "admin123"
+}
+###
+
+## Get current user
+GET http://localhost:8081/api/auth/current
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1ODc2NTkyNDcsInBheWxvYWQiOnsidXNlcm5hbWUiOiJjaGVmcGlwekBnbWFpbC5jb20iLCJpYXQiOjE1ODc2NTgzMzh9LCJpYXQiOjE1ODc2NTgzNDd9.KZH1n-succ9czRfemYUHAgxmt6MJQ_YA4Vqnb696uV8
+###
+
+## Refresh token
+POST http://localhost:8081/api/auth/refresh-token
+Content-Type: application/json
+
+###
